@@ -1,7 +1,8 @@
 {
   "name": "Alex-Dacre-dot-com",
   "description": "I am a JavaScript full stack developer and this is my blog, project log, and resume",
-  "version": "0.3",
+  "repository": "https://github.com/agoldenduck/agoldenduck.github.io.git",
+  "version": "0.3.1",
   "author": "Alex Dacre <alex@alexdacre.com>",
   "dependencies": {
     "front-matter": "^2.0.7",
@@ -34,7 +35,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && master -d public",
+    "deploy": "gatsby build --prefix-links && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
