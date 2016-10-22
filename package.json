@@ -1,5 +1,5 @@
 {
-  "name": "Alex Dacre dot com",
+  "name": "Alex-Dacre-dot-com",
   "description": "I am a JavaScript full stack developer and this is my blog, project log, and resume",
   "version": "0.3",
   "author": "Alex Dacre <alex@alexdacre.com>",
@@ -34,7 +34,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public",
+    "deploy": "gatsby build --prefix-links && master -d public",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
