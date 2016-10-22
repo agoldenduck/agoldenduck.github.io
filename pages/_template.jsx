@@ -1,19 +1,19 @@
-import React from 'react'
-import { Container } from 'react-responsive-grid'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
-import '../css/markdown-styles'
+import React from 'react';
+import { Container } from 'react-responsive-grid';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Headroom from 'react-headroom';
+import '../css/markdown-styles.css';
 
-import { rhythm } from '../utils/typography'
+import { rhythm } from '../utils/typography';
 
 module.exports = React.createClass({
-  propTypes () {
+  propTypes() {
     return {
       children: React.PropTypes.any,
-    }
+    };
   },
-  render () {
+  render() {
     return (
       <div>
         <Headroom
@@ -28,7 +28,7 @@ module.exports = React.createClass({
             style={{
               maxWidth: 960,
               paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
+              padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
             }}
           >
             <Link
@@ -45,13 +45,13 @@ module.exports = React.createClass({
         <Container
           style={{
             maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
+            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
             paddingTop: 0,
           }}
         >
           {this.props.children}
         </Container>
       </div>
-    )
+    );
   },
-})
+});

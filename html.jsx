@@ -1,24 +1,24 @@
-import React from 'react'
-import Helmet from "react-helmet"
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import { prefixLink } from 'gatsby-helpers'
-import { TypographyStyle, GoogleFont } from 'react-typography'
-import typography from './utils/typography'
+import { prefixLink } from 'gatsby-helpers';
+import { TypographyStyle, GoogleFont } from 'react-typography';
+import typography from './utils/typography';
 
-const BUILD_TIME = new Date().getTime()
+const BUILD_TIME = new Date().getTime();
 
 module.exports = React.createClass({
-  propTypes () {
+  propTypes() {
     return {
       body: React.PropTypes.string,
-    }
+    };
   },
-  render () {
-    const head = Helmet.rewind()
+  render() {
+    const head = Helmet.rewind();
 
-    let css
+    let css;
     if (process.env.NODE_ENV === 'production') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />;
     }
 
     return (
@@ -41,6 +41,6 @@ module.exports = React.createClass({
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>
-    )
+    );
   },
-})
+});

@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { config } from '../config.toml';
+
 import './example.scss'
-import Helmet from 'react-helmet'
-import { config } from 'config'
 
 export default class Sass extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         <Helmet
-          title={`${config.siteTitle} | Hi sassy friends`} 
+          title={`${config.siteTitle} | Hi sassy friends`}
         />
         <h1
           className="the-sass-class"
@@ -30,6 +31,6 @@ export default class Sass extends React.Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }

@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Helmet from "react-helmet"
-import { config } from 'config'
+import React from 'react';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Helmet from 'react-helmet';
+import { config } from '../config.toml';
 
 export default class Index extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         <Helmet
           title={config.siteTitle}
           meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
           ]}
         />
         <h1>
@@ -60,6 +60,6 @@ export default class Index extends React.Component {
           </li>
         </ul>
       </div>
-    )
+    );
   }
 }

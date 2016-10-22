@@ -1,7 +1,10 @@
 {
   "name": "Alex-Dacre-dot-com",
   "description": "I am a JavaScript full stack developer and this is my blog, project log, and resume",
-  "repository": "https://github.com/agoldenduck/agoldenduck.github.io.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agoldenduck/agoldenduck.github.io"
+  },
   "version": "0.3.1",
   "author": "Alex Dacre <alex@alexdacre.com>",
   "dependencies": {
@@ -17,19 +20,35 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
+    "react": "^15.3.2",
     "react-headroom": "^2.1.2",
     "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
+    "react-router": "^2.8.1",
     "react-typography": "^0.14.0",
     "toml-js": "0.0.8",
     "typography": "^0.14.0",
     "typography-plugin-code": "^0.14.0"
   },
   "devDependencies": {
-    "gh-pages": "^0.11.0"
+    "babel": "^6.5.2",
+    "babel-jest": "^16.0.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-config-postcss": "^2.0.2",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "gh-pages": "^0.11.0",
+    "jest": "^16.0.2"
   },
   "keywords": [
-    "gatsby"
+    "alex",
+    "dacre",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -37,6 +56,32 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-links && gh-pages -d public -b master",
     "develop": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "plugins": [
+      "react",
+      "import"
+    ],
+    "extends": [
+      "eslint-config-postcss",
+      "airbnb"
+    ],
+    "settings": {
+      "import/core-modules": [
+        "gatsby-helpers"
+      ]
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {}
   }
 }

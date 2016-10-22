@@ -1,14 +1,15 @@
-import React from 'react'
-import './example.css'
-import Helmet from 'react-helmet'
-import { config } from 'config'
+import React from 'react';
+import Helmet from 'react-helmet';
+
+import { config } from '../config.toml';
+import './example.css';
 
 export default class PostCSS extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         <Helmet
-          title={`${config.siteTitle} | Hi PostCSSy friends`} 
+          title={`${config.siteTitle} | Hi PostCSSy friends`}
         />
         <h1 className="the-postcss-class">
           Hi PostCSSy friends
@@ -28,6 +29,6 @@ export default class PostCSS extends React.Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
