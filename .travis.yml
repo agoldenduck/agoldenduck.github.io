@@ -1,5 +1,8 @@
 language: node_js
 node_js:
   - "node"
-after_success:
-  - npm run deploy
+after_success: |
+    if [ -n "$GITHUB_API_KEY" ]; then
+      gatsby build --prefix-links
+      gh-pages -d public -b master -r https://agoldenduck:$GITHUB_API_KEY@github.com/agoldenduck/agoldenduck.github.io -x
+    fi
