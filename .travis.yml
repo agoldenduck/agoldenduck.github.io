@@ -6,5 +6,5 @@ after_success: |
       git config user.name "Travis CI"
       git config user.email "alex@alexdacre.com"
       gatsby build --prefix-links
-      gh-pages -d public -b master -r https://agoldenduck:$GITHUB_API_KEY@github.com/agoldenduck/agoldenduck.github.io -x
+      gh-pages -d public -b master -r https://agoldenduck:$GITHUB_API_KEY@github.com/agoldenduck/agoldenduck.github.io
     fi
