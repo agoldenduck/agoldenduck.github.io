@@ -31,7 +31,7 @@ const md = markdownIt({
   .use(require('markdown-it-abbr'))
   .use(require('markdown-it-attrs'));
 
-module.exports = (content) => {
+module.exports = function (content) {
   this.cacheable();
   const meta = frontMatter(content);
   const body = md.render(meta.body);
