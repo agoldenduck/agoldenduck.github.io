@@ -5,6 +5,8 @@ import { prefixLink } from 'gatsby-helpers';
 import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from './utils/typography';
 
+const globalStyles = require('!raw!./public/styles.css');
+
 const BUILD_TIME = new Date().getTime();
 
 module.exports = React.createClass({
@@ -18,7 +20,7 @@ module.exports = React.createClass({
 
     let css;
     if (process.env.NODE_ENV === 'production') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />;
+      css = <style dangerouslySetInnerHTML={{ __html: globalStyles }} />;
     }
 
     return (

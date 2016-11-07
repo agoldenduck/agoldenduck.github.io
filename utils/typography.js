@@ -7,28 +7,43 @@ import CodePlugin from 'typography-plugin-code';
 const options = {
   googleFonts: [
     {
-      name: 'Montserrat',
+      name: 'Julius Sans One',
       styles: [
-        '700',
+        '400',
       ],
     },
     {
-      name: 'Arvo',
+      name: 'Source Sans Pro',
       styles: [
         '400',
         '400i',
         '700',
       ],
     },
+    {
+      name: 'Archivo Narrow',
+      styles: [
+        '700',
+      ],
+    },
   ],
-  headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Arvo', 'sans-serif'],
-  baseFontSize: '18px',
+  headerFontFamily: ['Julius Sans One', 'sans-serif'],
+  headerWeight: '400',
+  bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
+  baseFontSize: '20px',
   baseLineHeight: 1.65,
   scale: 2.25,
   plugins: [
     new CodePlugin(),
   ],
+  overrideStyles: () => ({
+    'h2, h3, h4, h5, h6': {
+      fontFamily: ['Archivo Narrow', 'sans-serif'].join(','),
+      fontWeight: '700',
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+    },
+  }),
 };
 
 const typography = new Typography(options);
