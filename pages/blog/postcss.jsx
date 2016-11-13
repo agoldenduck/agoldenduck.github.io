@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import { config } from '../config.toml';
+import { config } from '../../config.toml';
 import './example.css';
 
 export default class PostCSS extends React.Component {

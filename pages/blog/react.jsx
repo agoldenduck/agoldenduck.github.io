@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import { config } from '../config.toml';
+import { config } from '../../config.toml';
 
 export default class ReactComponent extends React.Component {
   constructor() {

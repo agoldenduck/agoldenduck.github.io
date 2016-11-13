@@ -4,6 +4,8 @@ import Typography from 'typography';
 import { GoogleFont } from 'react-typography';
 import CodePlugin from 'typography-plugin-code';
 
+// import styles from '../pages/styles.css';
+
 const options = {
   googleFonts: [
     {

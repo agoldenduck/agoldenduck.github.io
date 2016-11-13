@@ -1,0 +1,29 @@
+:root {
+                   /*
+                    colours
+                   */
+  --white          : #FBFBF8;
+  --black          : #0A2F45;
+  --orange         : #FC9F5B;
+  --blue-primary   : #59C3C3;
+  --blue-secondary : #5AB1BB;
+
+                   /*
+                     base line height
+                   */
+  --rhythm         : 1.65;
+}
+
+body {
+  background-color : var(--white);
+  color            : var(--black);
+}
+
+a {
+  color           : var(--blue-primary);
+  text-decoration : none;
+}
+
+a:visited {
+  color : var(--blue-secondary);
+}
