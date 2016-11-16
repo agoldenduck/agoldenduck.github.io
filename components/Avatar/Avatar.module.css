@@ -1,0 +1,8 @@
+.avatar {
+  composes      : m-b-1 from '../../css/space-utils.css';
+  composes      : m-x-a from '../../css/space-utils.css';
+  width         : 150px;
+  border-radius : 50%;
+  overflow      : hidden;
+  height        : 150px;
+}

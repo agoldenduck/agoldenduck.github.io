@@ -1,0 +1,38 @@
+/*@custom-media --large-phone (min-width: 321px);*/
+/*@custom-media --tablet (min-width: 415px);*/
+/*@custom-media --low-dpi (min-width: 769px);*/
+/*@custom-media --hi-dpi (min-width: 1281px);*/
+
+:root {
+           /*
+             base measurement unit
+            */
+  --rhythm : 1.65rem;
+}
+
+/*
+  margin helpers
+  (margin)-(axis)-(amount)
+ */
+.m-b-1 {
+  margin-bottom : var(--rhythm);
+}
+
+.m-y-1 {
+  margin-top    : var(--rhythm);
+  margin-bottom : var(--rhythm);
+}
+
+.m-x-a {
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+/*
+  padding helpers
+  (padding)-(axis)-(amount)
+ */
+
+.p-a-1 {
+  padding : var(--rhythm);
+}

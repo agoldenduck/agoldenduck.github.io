@@ -9,43 +9,36 @@ import CodePlugin from 'typography-plugin-code';
 const options = {
   googleFonts: [
     {
-      name: 'Julius Sans One',
+      name: 'Source Code Pro',
       styles: [
-        '400',
+        '300',
       ],
     },
     {
       name: 'Source Sans Pro',
       styles: [
-        '400',
-        '400i',
+        '300',
+        '300i',
         '700',
       ],
     },
     {
-      name: 'Archivo Narrow',
+      name: 'Raleway',
       styles: [
-        '700',
+        '400',
       ],
     },
   ],
-  headerFontFamily: ['Julius Sans One', 'sans-serif'],
+  headerFontFamily: ['Raleway', 'sans-serif'],
   headerWeight: '400',
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
+  bodyWeight: '300',
   baseFontSize: '20px',
   baseLineHeight: 1.65,
-  scale: 2.25,
+  scaleRatio: 3,
   plugins: [
     new CodePlugin(),
   ],
-  overrideStyles: () => ({
-    'h2, h3, h4, h5, h6': {
-      fontFamily: ['Archivo Narrow', 'sans-serif'].join(','),
-      fontWeight: '700',
-      textTransform: 'uppercase',
-      letterSpacing: '0.1em',
-    },
-  }),
 };
 
 const typography = new Typography(options);

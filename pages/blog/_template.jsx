@@ -38,14 +38,15 @@ module.exports = React.createClass({
                 textDecoration: 'none',
               }}
             >
-              Alex Dacre dot com
+              Alex Dacre
             </Link>
           </Container>
         </Headroom>
+
         <Container
           style={{
             maxWidth: 780,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
+            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
             paddingTop: 0,
           }}
         >

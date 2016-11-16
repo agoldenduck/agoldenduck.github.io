@@ -5,18 +5,26 @@
   --white          : #FBFBF8;
   --black          : #0A2F45;
   --orange         : #FC9F5B;
-  --blue-primary   : #59C3C3;
+  --blue-primary   : #77CDCD;
   --blue-secondary : #5AB1BB;
 
-                   /*
-                     base line height
-                   */
-  --rhythm         : 1.65;
 }
 
 body {
   background-color : var(--white);
   color            : var(--black);
+}
+
+h1 {
+  font-size   : 2.4rem;
+  line-height : 2.7rem;
+}
+
+@media (min-width : 376px) {
+  h1 {
+    font-size   : 3rem;
+    line-height : 3.3rem;
+  }
 }
 
 a {

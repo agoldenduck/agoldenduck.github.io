@@ -1,62 +1,72 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 import { Container } from 'react-responsive-grid';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import CSSModules from 'react-css-modules';
 
-import { rhythm } from '../utils/typography';
-import { config } from '../config.toml';
+import Avatar from '../components/Avatar';
+import Footer from '../components/Footer';
 import styles from './index.module.css';
-import avatar from '../img/alex_dacre.jpg';
+import { config } from '../config.toml';
 
 const Index = () => (
-  <div>
+  <div
+    styleName="wrapper"
+  >
     <Helmet
       title={config.siteTitle}
       meta={[
         { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'Alex, Dacre, React, javascript, ux' },
+        {
+          name: 'keywords',
+          content: 'Alex, Dacre, React, JavaScript, ux, community, web, developer',
+        },
       ]}
     />
 
     <Container
-      style={{
-        maxWidth: 780,
-        paddingTop: 0,
-        padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-      }}
+      styleName="container"
     >
-      <div className="avatar">
-        <img src={avatar} alt="Alex Dacre avatar" />
-      </div>
+      <Avatar />
 
-      <h1>
+      <h1
+        styleName="title"
+      >
         Alex Dacre
       </h1>
 
-      <ul>
-        <li>
-          <Link to={prefixLink('/blog/markdown/')}>Markdown</Link>
-        </li>
+      <p
+        styleName="purpose"
+      >
+        I write JavaScript to foster an inclusive and empowered community.
+      </p>
 
-        <li>
-          <Link to={prefixLink('/blog/react/')}>JSX (React components)</Link>
-        </li>
-      </ul>
+      <p
+        styleName="links"
+      >
+        <Link
+          to={prefixLink('about/')}
+        >
+          About Me
+        </Link>
 
-      <h3>Supported CSS processors</h3>
+        <Link
+          to={prefixLink('blog/')}
+        >
+          Blog
+        </Link>
 
-      <ul>
-        <li>
-          <Link to={prefixLink('/blog/postcss/')}>PostCSS</Link>
-        </li>
+        <Link
+          to={prefixLink('projects/')}
+        >
+          Projects
+        </Link>
+      </p>
 
-        <li>
-          <Link to={prefixLink('/blog/css-modules/')}>CSS Modules</Link>
-        </li>
-      </ul>
+      <Footer />
     </Container>
   </div>
 );
 
-export default Index;
+export default CSSModules(Index, styles);
