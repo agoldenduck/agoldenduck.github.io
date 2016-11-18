@@ -1,0 +1,12 @@
+@import url('./theme-variables.css');
+
+.container {
+  composes : p-a-1 from './space-utils.css';
+  max-width : var(--container-width);
+}
+
+.title {
+  font-family    : var(--title-font);
+  font-weight    : var(--title-weight);
+  letter-spacing : -0.2rem;
+}

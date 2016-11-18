@@ -28,7 +28,9 @@ const Index = () => (
     <Container
       styleName="container"
     >
-      <Avatar />
+      <Avatar
+        size={150}
+      />
 
       <h1
         styleName="title"

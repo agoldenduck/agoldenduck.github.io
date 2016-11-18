@@ -13,9 +13,8 @@
 }
 
 .title {
-  font-family    : 'Source Code Pro', monospace;
-  font-weight    : 300;
-  letter-spacing : -0.2rem;
+  composes: title from '../css/theme-utils.css';
+  composes: m-t-1 from '../css/space-utils.css';
 }
 
 .purpose {

@@ -1,0 +1,16 @@
+.title-link {
+  display         : flex;
+  justify-content : flex-start;
+  align-items     : center;
+}
+
+.title {
+  composes      : title from '../../css/theme-utils.css';
+  composes      : p-l-1 from '../../css/space-utils.css';
+  margin-bottom : 0;
+  flex-grow     : 1;
+}
+
+.container {
+  composes: container from '../../css/theme-utils.css';
+}

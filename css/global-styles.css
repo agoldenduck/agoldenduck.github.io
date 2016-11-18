@@ -1,14 +1,4 @@
-:root {
-                   /*
-                    colours
-                   */
-  --white          : #FBFBF8;
-  --black          : #0A2F45;
-  --orange         : #FC9F5B;
-  --blue-primary   : #77CDCD;
-  --blue-secondary : #5AB1BB;
-
-}
+@import url('./theme-variables.css');
 
 body {
   background-color : var(--white);

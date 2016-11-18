@@ -18,6 +18,10 @@
   margin-bottom : var(--rhythm);
 }
 
+.m-t-1 {
+  margin-top : var(--rhythm);
+}
+
 .m-y-1 {
   margin-top    : var(--rhythm);
   margin-bottom : var(--rhythm);
@@ -35,4 +39,8 @@
 
 .p-a-1 {
   padding : var(--rhythm);
+}
+
+.p-l-1 {
+  padding-left : var(--rhythm);
 }

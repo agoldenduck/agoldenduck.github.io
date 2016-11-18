@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container } from 'react-responsive-grid';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
-import Headroom from 'react-headroom';
+import Header from '../../components/Header';
 
 import '../../css/markdown-styles.css';
 import { rhythm } from '../../utils/typography';
@@ -16,37 +14,12 @@ module.exports = React.createClass({
   render() {
     return (
       <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: 'lightgray',
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 780,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              Alex Dacre
-            </Link>
-          </Container>
-        </Headroom>
+        <Header />
 
         <Container
           style={{
             maxWidth: 780,
-            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+            padding: `${rhythm(1)}`,
             paddingTop: 0,
           }}
         >
