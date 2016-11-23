@@ -1,7 +1,8 @@
 @import url('./theme-variables.css');
 
 .container {
-  composes : p-a-1 from './space-utils.css';
+  composes  : p-a-1 from './space-utils.css';
+  composes  : m-x-a from './space-utils.css';
   max-width : var(--container-width);
 }
 
@@ -9,4 +10,25 @@
   font-family    : var(--title-font);
   font-weight    : var(--title-weight);
   letter-spacing : -0.2rem;
+}
+
+.box-shadow {
+  box-shadow : 2px 2px 5px color(var(--black) whiteness(75%));
+}
+
+.highlight-box {
+  composes         : box-shadow;
+  background-color : var(--orange);
+  color            : var(--white);
+}
+
+.highlight-text {
+  color : var(--orange);
+}
+
+.pull-data-left {
+  padding  : calc(var(--rhythm) * 0.1);
+  left     : calc(var(--rhythm) * -2.2);
+  width    : calc(var(--rhythm) * 1.2);
+  position : absolute;
 }

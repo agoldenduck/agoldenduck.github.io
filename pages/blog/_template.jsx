@@ -1,31 +1,28 @@
 import React from 'react';
-import { Container } from 'react-responsive-grid';
+import CSSModules from 'react-css-modules';
+
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import '../../css/markdown-styles.css';
-import { rhythm } from '../../utils/typography';
+import styles from './blog.module.css';
 
-module.exports = React.createClass({
-  propTypes() {
-    return {
-      children: React.PropTypes.any,
-    };
-  },
-  render() {
-    return (
-      <div>
-        <Header />
+const Template = props => (
+  <div>
+    <Header />
 
-        <Container
-          style={{
-            maxWidth: 780,
-            padding: `${rhythm(1)}`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </Container>
-      </div>
-    );
-  },
-});
+    <div
+      styleName="container"
+    >
+      {props.children}
+    </div>
+
+    <Footer />
+  </div>
+);
+
+Template.propTypes = {
+  children: React.PropTypes.node,
+};
+
+export default CSSModules(Template, styles);

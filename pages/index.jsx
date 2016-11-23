@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-responsive-grid';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
@@ -25,7 +24,7 @@ const Index = () => (
       ]}
     />
 
-    <Container
+    <div
       styleName="container"
     >
       <Avatar
@@ -67,7 +66,7 @@ const Index = () => (
       </p>
 
       <Footer />
-    </Container>
+    </div>
   </div>
 );
 

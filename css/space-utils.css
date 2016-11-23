@@ -1,14 +1,9 @@
+@import url('./theme-variables.css');
+
 /*@custom-media --large-phone (min-width: 321px);*/
 /*@custom-media --tablet (min-width: 415px);*/
 /*@custom-media --low-dpi (min-width: 769px);*/
 /*@custom-media --hi-dpi (min-width: 1281px);*/
-
-:root {
-           /*
-             base measurement unit
-            */
-  --rhythm : 1.65rem;
-}
 
 /*
   margin helpers
@@ -32,10 +27,23 @@
   margin-right : auto;
 }
 
+.m-x-n {
+  margin-left : calc(var(--rhythm) * -1);
+  margin-right: calc(var(--rhythm) * -1);
+}
+
 /*
   padding helpers
   (padding)-(axis)-(amount)
  */
+
+.p-a-1-4 {
+  padding: calc(var(--rhythm) * 0.25);
+}
+
+.p-a-1-2 {
+  padding : calc(var(--rhythm) * 0.5);
+}
 
 .p-a-1 {
   padding : var(--rhythm);

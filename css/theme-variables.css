@@ -8,7 +8,12 @@
   --blue-primary    : #77CDCD;
   --blue-secondary  : #5AB1BB;
 
-  --container-width : 780px;
+                    /*
+                      base measurement unit
+                     */
+  --rhythm          : 1.65rem;
+
+  --container-width : 640px;
 
   --title-font      : 'Source Code Pro', monospace;
   --title-weight    : 300;

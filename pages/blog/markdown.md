@@ -1,5 +1,6 @@
 ---
 title: I'm a markdown file!
+date: "2016-10-24 16:49"
 ---
 
 Markdown is pretty cool if you ask me.

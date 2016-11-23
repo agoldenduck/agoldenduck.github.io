@@ -1,0 +1,31 @@
+.container {
+  position : relative;
+}
+
+.heading {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : baseline;
+}
+
+.date {
+  composes    : m-b-1 from '../../css/space-utils.css';
+  line-height : 1;
+  text-align  : center;
+}
+
+.day {
+  font-size : 1.4rem;
+  display   : none;
+}
+
+.month {
+  composes       : highlight-text from '../../css/theme-utils.css';
+  font-weight    : bold;
+  text-transform : uppercase;
+  padding-left   : 3px;
+  padding-right  : 3px;
+}
+
+.year {
+}

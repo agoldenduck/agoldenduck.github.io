@@ -6,8 +6,7 @@
 }
 
 .container {
-  composes    : p-a-1 from '../css/space-utils.css';
-  max-width   : 780px;
+  composes    : container from '../css/theme-utils.css';
   padding-top : 0;
   text-align  : center;
 }
