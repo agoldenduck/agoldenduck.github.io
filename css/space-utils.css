@@ -9,6 +9,10 @@
   margin helpers
   (margin)-(axis)-(amount)
  */
+.m-b-1-2 {
+  margin-bottom : calc(var(--rhythm) * 0.5);
+}
+
 .m-b-1 {
   margin-bottom : var(--rhythm);
 }
@@ -22,14 +26,18 @@
   margin-bottom : var(--rhythm);
 }
 
+.m-b-2 {
+  margin-bottom : calc(var(--rhythm) * 2);
+}
+
 .m-x-a {
   margin-left  : auto;
   margin-right : auto;
 }
 
 .m-x-n {
-  margin-left : calc(var(--rhythm) * -1);
-  margin-right: calc(var(--rhythm) * -1);
+  margin-left  : calc(var(--rhythm) * -1);
+  margin-right : calc(var(--rhythm) * -1);
 }
 
 /*
@@ -38,7 +46,7 @@
  */
 
 .p-a-1-4 {
-  padding: calc(var(--rhythm) * 0.25);
+  padding : calc(var(--rhythm) * 0.25);
 }
 
 .p-a-1-2 {

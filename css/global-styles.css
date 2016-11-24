@@ -1,5 +1,9 @@
 @import url('./theme-variables.css');
 
+/*
+  heading is 0.8x smaller on tiny mobiles
+ */
+
 body {
   background-color : var(--white);
   color            : var(--black);
@@ -7,13 +11,26 @@ body {
 
 h1 {
   font-size   : 2.4rem;
-  line-height : 2.7rem;
+  line-height : 2.64rem;
 }
 
 @media (min-width : 376px) {
   h1 {
     font-size   : 3rem;
     line-height : 3.3rem;
+  }
+}
+
+h2 {
+  font-size      : 1.55rem;
+  line-height    : 1.98rem;
+  margin-bottom  : calc(var(--rhythm) * 0.5);
+}
+
+@media (min-width : 376px) {
+  h2 {
+    font-size   : 1.93318rem;
+    line-height : 2.475rem;
   }
 }
 

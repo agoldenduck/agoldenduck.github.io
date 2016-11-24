@@ -8,7 +8,7 @@ import '../../css/markdown-styles.css';
 import styles from './blog.module.css';
 
 const Template = props => (
-  <div>
+  <div styleName="wrapper">
     <Header />
 
     <div

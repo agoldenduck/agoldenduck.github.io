@@ -1,3 +1,8 @@
+.wrapper {
+  position   : relative;
+  min-height : 100vh;
+}
+
 .container {
   composes : container from '../../css/theme-utils.css';
 }
