@@ -7,14 +7,8 @@ import { prefixLink } from 'gatsby-helpers';
 import Avatar from '../Avatar';
 import styles from './Header.module.css';
 
-const currentLink = (section, link) => {
-  if (section === link) {
-    return {
-      color: '#FC9F5B',
-    };
-  }
-  return {};
-};
+const currentLink = (section, link) =>
+  (section === link ? { color: '#FC9F5B' } : {});
 
 const Header = props => (
   <Headroom
