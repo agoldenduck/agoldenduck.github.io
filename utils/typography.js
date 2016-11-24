@@ -17,8 +17,8 @@ const options = {
     {
       name: 'Source Sans Pro',
       styles: [
-        '300',
-        '300i',
+        '400',
+        '400i',
         '700',
       ],
     },
@@ -32,7 +32,7 @@ const options = {
   headerFontFamily: ['Raleway', 'sans-serif'],
   headerWeight: '400',
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
-  bodyWeight: '300',
+  bodyWeight: '400',
   baseFontSize: '20px',
   baseLineHeight: 1.65,
   scaleRatio: 3,

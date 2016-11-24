@@ -7,33 +7,67 @@ import { prefixLink } from 'gatsby-helpers';
 import Avatar from '../Avatar';
 import styles from './Header.module.css';
 
-const Header = () => (
+const currentLink = (section, link) => {
+  if (section === link) {
+    return {
+      color: '#FC9F5B',
+    };
+  }
+  return {};
+};
+
+const Header = props => (
   <Headroom
     style={{
-      backgroundColor: '#FBFBF8',
-      boxShadow: '0 1px 5px #CECECB',
+      backgroundColor: '#fff',
       height: 130,
     }}
+    disableInlineStyles
   >
-    <div
-      styleName="container"
-    >
+    <div styleName="container">
       <Link
         to={prefixLink('/')}
-        styleName="title-link"
+        styleName="avatar-link"
       >
-        <Avatar
-          size={64}
-        />
-
-        <h2
-          styleName="title"
-        >
-          Alex Dacre
-        </h2>
+        <Avatar size={64} />
       </Link>
+
+      <div styleName="link-container">
+        <Link to={prefixLink('/')}>
+          <h3 styleName="title">
+            Alex Dacre
+          </h3>
+        </Link>
+
+        <span styleName="links">
+          <Link
+            to={prefixLink('/about/')}
+            style={currentLink(props.section, 'about')}
+          >
+            About Me
+          </Link>
+
+          <Link
+            to={prefixLink('/blog/')}
+            style={currentLink(props.section, 'blog')}
+          >
+            Blog
+          </Link>
+
+          <Link
+            to={prefixLink('/projects/')}
+            style={currentLink(props.section, 'projects')}
+          >
+            Projects
+          </Link>
+        </span>
+      </div>
     </div>
   </Headroom>
 );
+
+Header.propTypes = {
+  section: React.PropTypes.string,
+};
 
 export default CSSModules(Header, styles);

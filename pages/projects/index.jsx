@@ -17,7 +17,7 @@ const Index = (props) => {
 
   return (
     <div>
-      <Helmet title={`${config.siteTitle} | Blog`} />
+      <Helmet title={`${config.siteTitle} | Projects`} />
 
       {
         sortedPages.map((post, i) => (

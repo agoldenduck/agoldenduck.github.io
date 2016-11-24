@@ -5,11 +5,11 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import '../../css/markdown-styles.css';
-import styles from './blog.module.css';
+import styles from './projects.module.css';
 
 const Template = props => (
   <div styleName="wrapper">
-    <Header section="blog" />
+    <Header section="projects" />
 
     <div styleName="container">
       {props.children}

@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import access from 'safe-access';
 import moment from 'moment';
+import curry from 'lodash/curry';
+import flow from 'lodash/flow';
 
 import styles from './PostStub.module.css';
 
@@ -11,12 +13,11 @@ const STUB_LENGTH = 200;
 const getFirstParagraph = desc =>
   desc.slice(desc.indexOf('<p>') + 3, desc.indexOf('</p>'));
 
+const limitStringLength = curry((LIMIT, string) =>
+  (string.length > LIMIT ? `${string.substr(0, LIMIT)}...` : string)
+);
 
-
-const generateDescription = (desc) => {
-  const stub = getFirstParagraph(desc);
-  return stub.length > STUB_LENGTH ? `${stub.substr(0, STUB_LENGTH)}...` : stub;
-};
+const generateDescription = flow(getFirstParagraph, limitStringLength(STUB_LENGTH));
 
 const PostStub = (props) => {
   const post = props.post;
@@ -47,7 +48,16 @@ const PostStub = (props) => {
         </div>
       </div>
 
-      <p>{description}</p>
+      <p>
+        {description}
+
+        <Link
+          styleName="more"
+          to={path}
+        >
+          Read more
+        </Link>
+      </p>
     </div>
   );
 };

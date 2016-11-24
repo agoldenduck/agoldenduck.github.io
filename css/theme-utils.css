@@ -26,6 +26,15 @@
   color : var(--orange);
 }
 
+.upper-case {
+  text-transform : uppercase;
+}
+
+.inline-upper-case {
+  composes  : upper-case;
+  font-size : 0.8rem;
+}
+
 .pull-data-left {
   padding  : calc(var(--rhythm) * 0.1);
   left     : calc(var(--rhythm) * -2.2);

@@ -60,3 +60,7 @@
 .p-l-1 {
   padding-left : var(--rhythm);
 }
+
+.p-r-1 {
+  padding-right : var(--rhythm);
+}

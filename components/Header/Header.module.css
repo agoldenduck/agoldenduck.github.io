@@ -1,16 +1,40 @@
-.title-link {
+.container {
+  composes        : container from '../../css/theme-utils.css';
   display         : flex;
-  justify-content : flex-start;
+  justify-content : space-between;
   align-items     : center;
 }
 
+.avatar-link {
+  composes      : p-r-1 from '../../css/space-utils.css';
+}
+
+@media (max-width : 375px) {
+  .avatar-link {
+    display         : none;
+  }
+}
+
+.link-container {
+  display         : flex;
+  flex-flow       : row wrap;
+  flex-grow       : 1;
+  align-items     : center;
+  justify-content : space-between;
+}
+
 .title {
+  composes      : p-r-1 from '../../css/space-utils.css';
   composes      : title from '../../css/theme-utils.css';
-  composes      : p-l-1 from '../../css/space-utils.css';
   margin-bottom : 0;
   flex-grow     : 1;
 }
 
-.container {
-  composes: container from '../../css/theme-utils.css';
+.links {
+  composes        : inline-upper-case from '../../css/theme-utils.css';
+  display         : flex;
+  flex-basis      : 250px;
+  justify-content : space-between;
+  margin-top      : 2px;
+  align-items     : right;
 }

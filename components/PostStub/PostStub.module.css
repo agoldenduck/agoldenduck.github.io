@@ -1,5 +1,5 @@
 .container {
-  composes: m-b-2 from '../../css/space-utils.css';
+  composes : m-b-2 from '../../css/space-utils.css';
   position : relative;
 }
 
@@ -30,4 +30,9 @@
 }
 
 .year {
+}
+
+.more {
+  composes : inline-upper-case from '../../css/theme-utils.css';
+  padding-left : 5px;
 }

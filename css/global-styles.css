@@ -5,8 +5,7 @@
  */
 
 body {
-  background-color : var(--white);
-  color            : var(--black);
+  color : var(--black);
 }
 
 h1 {
@@ -22,9 +21,9 @@ h1 {
 }
 
 h2 {
-  font-size      : 1.55rem;
-  line-height    : 1.98rem;
-  margin-bottom  : calc(var(--rhythm) * 0.5);
+  font-size     : 1.55rem;
+  line-height   : 1.98rem;
+  margin-bottom : calc(var(--rhythm) * 0.5);
 }
 
 @media (min-width : 376px) {
@@ -39,6 +38,37 @@ a {
   text-decoration : none;
 }
 
-a:visited {
+a:visited, a:hover {
   color : var(--blue-secondary);
+}
+
+/*
+  Headroom styles
+ */
+
+.headroom {
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  z-index : 1;
+}
+
+.headroom--unfixed {
+  position  : relative;
+  transform : translateY(0);
+}
+
+.headroom--scrolled {
+  transition : transform 200ms ease-in-out;
+}
+
+.headroom--unpinned {
+  position  : fixed;
+  transform : translateY(-100%);
+}
+
+.headroom--pinned {
+  position   : fixed;
+  transform  : translateY(0%);
+  box-shadow : 0 2px 5px #CECECB;
 }
