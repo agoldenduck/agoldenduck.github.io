@@ -12,12 +12,12 @@ const Avatar = props => (
       height: props.size,
     }}
   >
-    <img src={avatar} alt="Alex Dacre javascript developer" />
+    <img src={avatar} alt="Alex Dacre, Sydney javascript developer" />
   </div>
 );
 
 Avatar.propTypes = {
   size: React.PropTypes.number.isRequired,
-}
+};
 
 export default CSSModules(Avatar, styles);
