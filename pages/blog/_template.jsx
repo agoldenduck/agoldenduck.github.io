@@ -7,21 +7,17 @@ import Footer from '../../components/Footer';
 import '../../css/markdown-styles.css';
 import styles from './blog.module.css';
 
-class Template extends React.Component {
-  render() {
-    return (
-      <div styleName="wrapper">
-        <Header section="blog" />
+const Template = props => (
+  <div styleName="wrapper">
+    <Header section="blog" />
 
-        <div styleName="container">
-          {this.props.children}
-        </div>
+    <div styleName="container">
+      {props.children}
+    </div>
 
-        <Footer />
-      </div>
-    );
-  }
-}
+    <Footer />
+  </div>
+);
 
 Template.propTypes = {
   children: React.PropTypes.node,
