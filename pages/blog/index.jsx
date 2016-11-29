@@ -1,19 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import sortBy from 'lodash/sortBy';
-import access from 'safe-access';
 
 import PostStub from '../../components/PostStub';
 import { config } from '../../config.toml';
-
-const filterPosts = pages =>
-  pages.filter(page => /^blog.+\.md$/.test(access(page, 'requirePath')));
-
-const getSortedBlogPosts = pages =>
-  sortBy(filterPosts(pages), page => access(page, 'data.date')).reverse();
+import { filterPosts, getSortedPosts } from '../../utils';
 
 const Index = (props) => {
-  const sortedPages = getSortedBlogPosts(props.route.pages);
+  const filterBy = filterPosts(/^blog\/.+\.md$/);
+  const sortedPages = getSortedPosts(filterBy(props.route.pages));
 
   return (
     <div>

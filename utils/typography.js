@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom/server';
 import React from 'react';
 import Typography from 'typography';
 import { GoogleFont } from 'react-typography';
-import CodePlugin from 'typography-plugin-code';
 
 // import styles from '../pages/styles.css';
 
@@ -12,6 +11,8 @@ const options = {
       name: 'Source Code Pro',
       styles: [
         '300',
+        '400',
+        '700',
       ],
     },
     {
@@ -36,9 +37,20 @@ const options = {
   baseFontSize: '20px',
   baseLineHeight: 1.65,
   scaleRatio: 3,
-  plugins: [
-    new CodePlugin(),
-  ],
+  // plugins: [
+  //   new CodePlugin(),
+  // ],
+  overrideStyles: () => ({
+    pre: {
+      background: '#FBFBF8',
+      fontFamily: ['Source Code Pro', 'monospace'].join(','),
+      fontWeight: 400,
+    },
+    code: {
+      fontFamily: ['Source Code Pro', 'monospace'].join(','),
+      fontWeight: 400,
+    },
+  }),
 };
 
 const typography = new Typography(options);
@@ -50,7 +62,7 @@ if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles();
   if (typeof document !== 'undefined') {
     const googleFonts = ReactDOM.renderToStaticMarkup(
-      React.createFactory(GoogleFont)({ typography })
+      React.createFactory(GoogleFont)({ typography }),
     );
     const head = document.getElementsByTagName('head')[0];
     head.insertAdjacentHTML('beforeend', googleFonts);

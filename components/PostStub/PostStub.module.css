@@ -22,7 +22,6 @@
 }
 
 .month {
-  composes       : highlight-text from '../../css/theme-utils.css';
   font-weight    : bold;
   text-transform : uppercase;
   padding-left   : 3px;
@@ -33,6 +32,6 @@
 }
 
 .more {
-  composes : inline-upper-case from '../../css/theme-utils.css';
+  composes     : inline-upper-case from '../../css/theme-utils.css';
   padding-left : 5px;
 }

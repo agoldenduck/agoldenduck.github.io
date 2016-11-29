@@ -5,7 +5,7 @@ import { prefixLink } from 'gatsby-helpers';
 import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from './utils/typography';
 
-const globalStyles = require('!raw!./public/styles.css');
+const globalStyles = require('!raw!./public/styles.css'); // eslint-disable-line
 
 const BUILD_TIME = new Date().getTime();
 
