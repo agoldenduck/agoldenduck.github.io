@@ -3,6 +3,16 @@
   position : relative;
 }
 
+.even {
+  composes   : container;
+  text-align : right;
+}
+
+.odd {
+  composes : container;
+  text-align : left;
+}
+
 .heading {
   display         : flex;
   justify-content : space-between;
@@ -12,7 +22,6 @@
 
 .date {
   line-height : 1;
-  text-align  : right;
   flex-grow   : 1;
 }
 

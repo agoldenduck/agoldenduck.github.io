@@ -12,7 +12,7 @@ import { config } from '../config.toml';
 const About = () => (
   <div styleName="wrapper">
     <Helmet
-      title={config.siteTitle}
+      title={`${config.siteTitle} | About me`}
       meta={[
         { name: 'description', content: 'Sample' },
         {
@@ -35,15 +35,15 @@ const About = () => (
       </p>
 
       <p styleName="links">
-        <Link to={prefixLink('about/')}>
+        <Link to={prefixLink('/about/')}>
           About Me
         </Link>
 
-        <Link to={prefixLink('blog/')}>
+        <Link to={prefixLink('/blog/')}>
           Blog
         </Link>
 
-        <Link to={prefixLink('projects/')}>
+        <Link to={prefixLink('/projects/')}>
           Projects
         </Link>
       </p>

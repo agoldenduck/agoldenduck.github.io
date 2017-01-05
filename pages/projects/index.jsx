@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import PostStub from '../../components/PostStub';
+import ProjectStub from '../../components/ProjectStub';
 import { config } from '../../config.toml';
 import { filterPosts, getSortedPosts } from '../../utils';
 
@@ -15,8 +15,9 @@ const Index = (props) => {
 
       {
         sortedPages.map((post, i) => (
-          <PostStub
+          <ProjectStub
             key={i}
+            even={i % 2 === 1}
             post={post}
           />
         ))

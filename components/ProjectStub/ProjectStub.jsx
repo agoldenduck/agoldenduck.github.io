@@ -6,7 +6,7 @@ import moment from 'moment';
 import curry from 'lodash/curry';
 import flow from 'lodash/flow';
 
-import styles from './PostStub.module.css';
+import styles from './ProjectStub.module.css';
 
 const STUB_LENGTH = 200;
 
@@ -19,7 +19,7 @@ const limitStringLength = curry((LIMIT, string) =>
 
 const generateDescription = flow(getFirstParagraph, limitStringLength(STUB_LENGTH));
 
-const PostStub = (props) => {
+const ProjectStub = (props) => {
   const post = props.post;
   const title = access(post, 'data.title') || post.file.stem;
   const description = generateDescription(access(post, 'data.body'));
@@ -27,21 +27,21 @@ const PostStub = (props) => {
   const path = post.path;
 
   return (
-    <div styleName="container">
+    <div styleName={props.even ? 'even' : 'odd'}>
+      <div styleName="date">
+        <span styleName="month">
+          {published.format('MMM')}
+        </span>
+
+        <span styleName="year">
+          {published.format('YYYY')}
+        </span>
+      </div>
+
       <div styleName="heading">
         <Link to={path}>
           <h2>{title}</h2>
         </Link>
-
-        <div styleName="date">
-          <span styleName="month">
-            {published.format('MMM')}
-          </span>
-
-          <span styleName="year">
-            {published.format('YYYY')}
-          </span>
-        </div>
       </div>
 
       <p>
@@ -58,8 +58,9 @@ const PostStub = (props) => {
   );
 };
 
-PostStub.propTypes = {
+ProjectStub.propTypes = {
   post: React.PropTypes.objectOf(React.PropTypes.any),
+  even: React.PropTypes.bool,
 };
 
-export default CSSModules(PostStub, styles);
+export default CSSModules(ProjectStub, styles);
