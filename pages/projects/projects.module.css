@@ -5,4 +5,15 @@
 
 .container {
   composes : container from '../../css/theme-utils.css';
+  position : relative;
+}
+
+.timeline {
+  composes     : m-t-1 from '../../css/space-utils.css';
+  composes     : border--black from '../../css/theme-utils.css';
+  position     : absolute;
+  top          : 0;
+  bottom       : 0;
+  width        : 50%;
+  border-right : 1px solid;
 }
