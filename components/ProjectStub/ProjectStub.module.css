@@ -1,19 +1,33 @@
 .container {
-  position : relative;
-  width    : 55%;
-  margin-bottom : -4.95rem;
+  position      : relative;
+  width         : 65%;
+  margin-bottom : -3.3rem;
 }
 
 .even {
   composes   : container;
+  composes   : p-r-1 from '../../css/space-utils.css';
   text-align : right;
-  right      : 5%;
+  right      : 15%;
 }
 
 .odd {
   composes   : container;
+  composes   : p-l-1 from '../../css/space-utils.css';
   text-align : left;
-  left       : 60%;
+  left       : 50%;
+}
+
+.img-container {
+  overflow    : hidden;
+  height      : 100px;
+  display     : flex;
+  align-items : center;
+}
+
+.img {
+  width         : 100%;
+  margin-bottom : 0;
 }
 
 .heading {
@@ -44,4 +58,5 @@
 .more {
   composes     : inline-upper-case from '../../css/theme-utils.css';
   padding-left : 5px;
+  white-space  : nowrap;
 }

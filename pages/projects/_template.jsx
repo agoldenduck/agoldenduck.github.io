@@ -13,8 +13,6 @@ const Template = props => (
 
     <div styleName="container">
       {props.children}
-
-      <div styleName="timeline" />
     </div>
 
     <Footer />

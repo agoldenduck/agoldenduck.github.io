@@ -8,12 +8,20 @@
   position : relative;
 }
 
+.clearfix {
+  position : relative;
+  height   : 1px;
+  padding-bottom: 4.95rem;
+  z-index: -1;
+}
+
 .timeline {
   composes     : m-t-1 from '../../css/space-utils.css';
   composes     : border--black from '../../css/theme-utils.css';
   position     : absolute;
   top          : 0;
-  bottom       : 0;
-  width        : 50%;
+  bottom       : 4.95rem;
+  width        : calc(50% - 1.65rem);
   border-right : 1px solid;
+  z-index      : -1;
 }

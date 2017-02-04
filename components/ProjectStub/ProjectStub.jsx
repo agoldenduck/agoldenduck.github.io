@@ -20,11 +20,12 @@ const limitStringLength = curry((LIMIT, string) =>
 const generateDescription = flow(getFirstParagraph, limitStringLength(STUB_LENGTH));
 
 const ProjectStub = (props) => {
-  const post = props.post;
+  const { post } = props;
   const title = access(post, 'data.title') || post.file.stem;
   const description = generateDescription(access(post, 'data.body'));
   const published = moment(access(post, 'data.date'));
-  const path = post.path;
+  const img = access(post, 'data.img') || false;
+  const { path } = post;
 
   return (
     <div styleName={props.even ? 'even' : 'odd'}>
@@ -37,6 +38,12 @@ const ProjectStub = (props) => {
           {published.format('YYYY')}
         </span>
       </div>
+
+      { img && (
+        <div styleName="img-container">
+          <img styleName="img" alt={title} src={`/${img}`} />
+        </div>
+      )}
 
       <div styleName="heading">
         <Link to={path}>

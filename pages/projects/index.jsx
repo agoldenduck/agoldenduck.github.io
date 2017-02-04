@@ -1,9 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import CSSModules from 'react-css-modules';
 
 import ProjectStub from '../../components/ProjectStub';
-import { config } from '../../config.toml';
 import { filterPosts, getSortedPosts } from '../../utils';
+import { config } from '../../config.toml';
+import styles from './projects.module.css';
 
 const Index = (props) => {
   const filterBy = filterPosts(/^projects\/.+\.md$/);
@@ -22,6 +24,10 @@ const Index = (props) => {
           />
         ))
       }
+
+      <div styleName="timeline" />
+
+      <div styleName="clearfix" />
     </div>
   );
 };
@@ -30,4 +36,4 @@ Index.propTypes = {
   route: React.PropTypes.objectOf(React.PropTypes.any),
 };
 
-export default Index;
+export default CSSModules(Index, styles);
