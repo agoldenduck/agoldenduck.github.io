@@ -1,6 +1,7 @@
 ---
 layout: "project"
 title: "Democracy Online"
+tags: "user experience, human centred design, research"
 date: "2017-01-05 20:22"
 ---
 

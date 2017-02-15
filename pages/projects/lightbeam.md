@@ -1,6 +1,7 @@
 ---
 layout: "project"
 title: "lightbeam"
+tags: "javascript, nodejs, electron"
 date: "2016-04-15 16:50"
 ---
 

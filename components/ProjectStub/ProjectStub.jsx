@@ -19,9 +19,12 @@ const limitStringLength = curry((LIMIT, string) =>
 
 const generateDescription = flow(getFirstParagraph, limitStringLength(STUB_LENGTH));
 
+const generateTags = tags => tags && tags.split(',').map(tag => tag.trim());
+
 const ProjectStub = (props) => {
   const { post } = props;
   const title = access(post, 'data.title') || post.file.stem;
+  const tags = generateTags(access(post, 'data.tags'));
   const description = generateDescription(access(post, 'data.body'));
   const published = moment(access(post, 'data.date'));
   const img = access(post, 'data.img') || false;
@@ -39,17 +42,17 @@ const ProjectStub = (props) => {
         </span>
       </div>
 
-      { img && (
-        <div styleName="img-container">
-          <img styleName="img" alt={title} src={`/${img}`} />
-        </div>
-      )}
-
       <div styleName="heading">
         <Link to={path}>
           <h2>{title}</h2>
         </Link>
       </div>
+
+      { tags && tags.map(tag => (
+        <span styleName="tag">
+          {tag}
+        </span>
+      ))}
 
       <p>
         {description}
