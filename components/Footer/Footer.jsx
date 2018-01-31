@@ -17,7 +17,7 @@ const Footer = () => (
       overlay={<span>See my Stack Overflow story</span>}
     >
       <Link
-        to="http://stackoverflow.com/users/story/5283066"
+        to="https://stackoverflow.com/story/alexdacre"
         target="_blank"
       >
         <FontAwesome

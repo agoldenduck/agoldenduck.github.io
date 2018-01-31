@@ -31,7 +31,7 @@ const About = () => (
       </h1>
 
       <p styleName="purpose">
-        I write JavaScript to foster an inclusive and empowered community.
+        UNDER CONSTRUCTION
       </p>
 
       <p styleName="links">
