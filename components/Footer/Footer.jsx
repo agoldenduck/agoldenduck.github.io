@@ -2,7 +2,6 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import { Link } from 'react-router';
 import { Icon as FontAwesome } from 'react-fa';
-import Mailto from 'react-mailto';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
 
@@ -44,14 +43,13 @@ const Footer = () => (
       placement="top"
       overlay={<span>Email me</span>}
     >
-      <Mailto
-        email="alex@alexdacre.com"
-        obfuscate
+      <a
+        href={'mailto:alex@alexdacre.com'}
       >
         <FontAwesome
           name="envelope-open-o"
         />
-      </Mailto>
+      </a>
     </Tooltip>
 
     <Tooltip
