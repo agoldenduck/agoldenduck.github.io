@@ -37,12 +37,12 @@ const ProjectStub = (props) => {
           {published.format('MMM')}
         </span>
 
-        <span styleName="year">
+        <span>
           {published.format('YYYY')}
         </span>
       </div>
 
-      <div styleName="heading">
+      <div>
         <Link to={path}>
           <h2>{title}</h2>
         </Link>

@@ -1,3 +1,5 @@
+@value low-dpi from '../../css/space-utils.css';
+
 .wrapper {
   position   : relative;
   min-height : 100vh;
@@ -9,10 +11,10 @@
 }
 
 .clearfix {
-  position : relative;
-  height   : 1px;
-  padding-bottom: 4.95rem;
-  z-index: -1;
+  position       : relative;
+  height         : 1px;
+  padding-bottom : 4.95rem;
+  z-index        : -1;
 }
 
 .timeline {
@@ -22,6 +24,11 @@
   top          : 0;
   bottom       : 4.95rem;
   width        : calc(50% - 1.65rem);
-  border-right : 1px solid;
   z-index      : -1;
+}
+
+@media low-dpi {
+  .timeline {
+    border-right : 1px solid;
+  }
 }

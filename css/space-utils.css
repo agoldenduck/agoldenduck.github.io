@@ -1,11 +1,11 @@
 @import url('./theme-variables.css');
 
-/*@custom-media --large-phone (min-width: 321px);*/
-/*@custom-media --tablet (min-width: 415px);*/
-/*@custom-media --low-dpi (min-width: 769px);*/
-/*@custom-media --hi-dpi (min-width: 1281px);*/
+@value large-phone: (min-width: 375px);
+@value tablet: (min-width: 415px);
+@value low-dpi: (min-width: 930px);
+@value hi-dpi: (min-width: 1281px);
 
-/*
+/**
   margin helpers
   (margin)-(axis)-(amount)
  */
@@ -40,7 +40,7 @@
   margin-right : calc(var(--rhythm) * -1);
 }
 
-/*
+/**
   padding helpers
   (padding)-(axis)-(amount)
  */
@@ -63,4 +63,14 @@
 
 .p-r-1 {
   padding-right : var(--rhythm);
+}
+
+@media low-dpi {
+  .ld-p-l-1 {
+    padding-left : var(--rhythm);
+  }
+
+  .ld-p-r-1 {
+    padding-right : var(--rhythm);
+  }
 }

@@ -1,32 +1,27 @@
-.container {
-  position      : relative;
-  width         : 65%;
-  margin-bottom : -3.3rem;
-}
+@value low-dpi from '../../css/space-utils.css';
+@value ld-p-l-1 from '../../css/space-utils.css';
+@value ld-p-r-1 from '../../css/space-utils.css';
 
-.even {
-  composes   : container;
-  composes   : p-r-1 from '../../css/space-utils.css';
-  text-align : right;
-  right      : 15%;
-}
+@media low-dpi {
+  .container {
+    position      : relative;
+    width         : 65%;
+    margin-bottom : -3.3rem;
+  }
 
-.odd {
-  composes   : container;
-  composes   : p-l-1 from '../../css/space-utils.css';
-  text-align : left;
-  left       : 50%;
-}
+  .even {
+    composes   : container;
+    composes   : ld-p-r-1;
+    text-align : right;
+    right      : 15%;
+  }
 
-.heading {
-  display         : flex;
-  justify-content : space-between;
-  align-items     : baseline;
-  flex-wrap       : wrap-reverse;
-}
-
-.even .heading {
-  justify-content : flex-end;
+  .odd {
+    composes   : container;
+    composes   : ld-p-l-1;
+    text-align : left;
+    left       : 50%;
+  }
 }
 
 .tag {
@@ -34,7 +29,7 @@
   padding          : 5px 8px;
   font-size        : 0.75rem;
   line-height      : 1rem;
-  margin-right      : 5px;
+  margin-right     : 5px;
   background-color : #FC9F5B;
   color            : #FBFBF8;
   border-radius    : 2px;
@@ -49,9 +44,6 @@
   text-transform : uppercase;
   padding-left   : 3px;
   padding-right  : 3px;
-}
-
-.year {
 }
 
 .more {

@@ -1,3 +1,5 @@
+@value large-phone from '../../css/space-utils.css';
+
 .container {
   composes        : container from '../../css/theme-utils.css';
   display         : flex;
@@ -6,12 +8,13 @@
 }
 
 .avatar-link {
-  composes      : p-r-1 from '../../css/space-utils.css';
+  display  : none;
+  composes : p-r-1 from '../../css/space-utils.css';
 }
 
-@media (max-width : 375px) {
+@media large-phone {
   .avatar-link {
-    display         : none;
+    display : initial;
   }
 }
 
