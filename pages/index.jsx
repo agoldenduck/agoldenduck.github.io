@@ -35,15 +35,15 @@ const Index = () => (
       </p>
 
       <p styleName="links">
-        <Link to={prefixLink('about/')}>
+        <Link styleName="link" to={prefixLink('about/')}>
           About Me
         </Link>
 
-        <Link to={prefixLink('blog/')}>
+        <Link styleName="link" to={prefixLink('blog/')}>
           Blog
         </Link>
 
-        <Link to={prefixLink('projects/')}>
+        <Link styleName="link" to={prefixLink('projects/')}>
           Projects
         </Link>
       </p>

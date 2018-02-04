@@ -1,3 +1,5 @@
+@value large-phone from '../css/space-utils.css';
+
 .wrapper {
   height          : 100vh;
   display         : flex;
@@ -20,7 +22,7 @@
   display : none;
 }
 
-@media (min-width : 376px) {
+@media large-phone {
   .purpose {
     display : block;
   }
@@ -30,6 +32,17 @@
   composes        : m-x-a from '../css/space-utils.css';
   composes        : upper-case from '../css/theme-utils.css';
   display         : flex;
+  flex-direction  : column;
   justify-content : space-around;
   max-width       : 350px;
+}
+
+@media large-phone {
+  .links {
+    flex-direction : row;
+  }
+}
+
+.link {
+  composes : p-x-1-2 from '../css/space-utils.css';
 }
