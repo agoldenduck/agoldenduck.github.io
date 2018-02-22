@@ -50,6 +50,9 @@ const options = {
       fontFamily: ['Source Code Pro', 'monospace'].join(','),
       fontWeight: 400,
     },
+    '.markdown': {
+      paddingBottom: rhythm(1)
+    }
   }),
 };
 

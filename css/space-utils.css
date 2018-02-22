@@ -1,7 +1,7 @@
 @import url('./theme-variables.css');
 
-@value large-phone: (min-width: 375px);
-@value tablet: (min-width: 415px);
+@value large-phone: (min-width: 400px);
+@value tablet: (min-width: 500px);
 @value low-dpi: (min-width: 930px);
 @value hi-dpi: (min-width: 1281px);
 
@@ -55,6 +55,11 @@
 
 .p-a-1 {
   padding : var(--rhythm);
+}
+
+.p-x-1-2 {
+  padding-left  : calc(var(--rhythm) * 0.5);
+  padding-right : calc(var(--rhythm) * 0.5);
 }
 
 .p-l-1 {

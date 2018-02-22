@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import CSSModules from 'react-css-modules';
+import { Icon as FontAwesome } from 'react-fa';
 
-import Avatar from '../components/Avatar';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styles from './index.module.css';
+import styles from './about.module.css';
 import { config } from '../config.toml';
 
 const About = () => (
@@ -23,33 +23,31 @@ const About = () => (
       ]}
     />
 
+    <Header section="about" />
+
     <div styleName="container">
-      <Avatar size={150} />
+      <h2>
+        Sydney Web Developer
+      </h2>
 
-      <h1 styleName="title">
-        Alex Dacre
-      </h1>
-
-      <p styleName="purpose">
-        UNDER CONSTRUCTION
+      <p>
+        I build fast websites and web applications.
       </p>
 
-      <p styleName="links">
-        <Link to={prefixLink('/about/')}>
-          About Me
-        </Link>
-
-        <Link to={prefixLink('/blog/')}>
-          Blog
-        </Link>
-
-        <Link to={prefixLink('/projects/')}>
-          Projects
-        </Link>
+      <p>
+        I build mobile first, user friendly, and fast web applications. My work empowers your business to tap into the
+        power of the internet to connect with your customers and other services. I work with you to find out your needs
+        and the needs of your customers. I work with you throughout the process until you are happy with the result.
       </p>
 
-      <Footer />
+      <p>
+        <a href="mailto:alex@alexdacre.com">
+         <FontAwesome name="envelope-open-o" /> Get in touch
+        </a> with me if you have a project or think I'd be a good fit for your business.
+      </p>
     </div>
+
+    <Footer />
   </div>
 );
 

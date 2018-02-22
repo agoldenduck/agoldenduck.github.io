@@ -14,12 +14,14 @@ const Index = (props) => {
       <Helmet title={`${config.siteTitle} | Blog`} />
 
       {
-        sortedPages.map((post, i) => (
+        sortedPages.length > 0 ? sortedPages.map((post, i) => (
           <PostStub
             key={i}
             post={post}
           />
-        ))
+        )) : (
+          <p>Blog coming soon</p>
+        )
       }
     </div>
   );

@@ -34,12 +34,12 @@ h2 {
 }
 
 a {
-  color           : var(--blue-primary);
+  color           : var(--blue-secondary);
   text-decoration : none;
 }
 
-a:visited, a:hover {
-  color : var(--blue-secondary);
+a:hover {
+  color : var(--blue-primary);
 }
 
 /*
