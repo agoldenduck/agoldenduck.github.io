@@ -1,6 +1,6 @@
 ---
 layout: "project"
-title: "Pok&eacute;mon @ Home"
+title: "Pokémon @ Home"
 link: "pokemonhome.netlify.com"
 tags: "reactjs, javascript, materialui, rxjs, apollo, graphql"
 date: "2018-02-22 20:22"
